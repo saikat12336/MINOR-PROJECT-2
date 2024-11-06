@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<?php
+
+        $showAlert= false;
+        $showError= false;
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+        include("connection.php");
+        //$username = mysqli_real_escape_string($conn, $_POST['user']);
+        $username = $_POST["user"];
+        $email = $_POST["email"];
+        $password = $_POST["pass"];
+        $cpassword = $_POST["cpass"];
+        $exists = false;
+        //$email = mysqli_real_escape_string($conn, $_POST['email']);
+        //$password = mysqli_real_escape_string($conn, $_POST['pass']);
+        //$cpassword = mysqli_real_escape_string($conn, $_POST['cpass']);
+
+if(($password == $cpassword) && $exists == false){
+    $sql = "INSERT INTO signup(username, email, password, date) VALUES('$username', '$email', '$password',current_timestamp())";
+    $result = mysqli_query($conn, $sql);
+    if($result){
+        $showAlert=true;
+    }
+}else{
+    $showError = "Password do not match";
+}
+
+}?>
+
+
+

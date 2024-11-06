@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    /* background: url("./pics/6.jpg") no-repeat center / cover; */
+
+    background: linear-gradient(to buttom, #0f0c29, #302b63, #24243e);
+}
+
+.main{
+    width: 350px;
+    height: 500px;
+    background: red;
+    overflow: hidden;
+    /* background: url("./pics/1.jpg") no-repeat center / cover; */
+    border-radius: 10px;
+    box-shadow: 15px 30px 60px #000;
+}
+
+#chk{
+    display: none;
+}
+
+.signup{
+    position: relative;
+    /* bottom: 60px; */
+    width: 100%;
+    height: 100%;
+}
+
+.box{
+    position: relative;
+    top: -45px;
+}
+
+.input-field{
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    max-height: 65px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+}
+
+form{
+    align-items: center;
+}
+
+label{
+    color: #f9c904;;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+input{
+    width: 60%;
+    height: 33px;
+    background: #d2d1d1;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button{
+    width: 25%;
+    height: 30px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #04b3f9;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #7caeef;
+}
+
+.login{
+    height: 460px;
+    /* background: url("./pics/7.jpg") no-repeat center / cover; */
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: -8s ease-in-out;
+}
+
+.login label{
+    color: #431778;
+    transform: scale(.6);
+}
+
+.login button{
+    color: black;
+    background-color: #04b3f9;
+}
+
+.login button:hover{
+    background: #7caeef;
+}
+
+#chk:checked ~ .login{
+    transform: translateY(-500px);
+}
+
+#chk:checked ~ .login label{
+    transform: scale(1);
+}
+
+#chk:checked ~ .signup label{
+    transform: scale(.6);
+}
+
+i{
+    position: absolute;
+    left: 4.3rem;
+    color:#565656;
+}
