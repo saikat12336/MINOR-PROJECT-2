@@ -24,7 +24,7 @@
                 session_start();
                 $_SESSION['name'] = $r['username'];
                 echo '<script> alert("Login Successful.");
-                window.location.href = "http://localhost/tutorial/5thsem/";
+                window.location.href = "http://localhost/MINOR-PROJECT-2/5thsem/";
                 </script>';
                 // header("Location: http://localhost/tutorial/5thsem/");
             }else{

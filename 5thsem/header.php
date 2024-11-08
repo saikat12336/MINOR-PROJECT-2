@@ -31,7 +31,7 @@ require('functions.php');
 <?php
   session_start();
   if(!isset($_SESSION['name']) || $_SESSION['name'] != true){
-    header("location: http://localhost/tutorial/5thlogin/login_form.php");
+    header("location: http://localhost/MINOR-PROJECT-2/5thlogin/login_form.php");
     exit;
   }
 ?>
